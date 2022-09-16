@@ -11,8 +11,9 @@
             </div>
         </div>
     </header>
-
-    <div id="nonheaderfooter">
+    <div class="hamburger_div">
+        <label for=cb id="menutoggle">&#9776 Page: {{page.title}}</label>
+        <input type='checkbox' style='display: none' id=cb>
         <div class="topmenu_content slider" id="topmenu_div">
             <h3 align=center>site map:</h3>
             <ul align=center>
@@ -23,10 +24,9 @@
                 </li>
                 {% endfor %}
             </ul>
-            <div class="hamburger_div">
-                <button class="hamburger" type="button" onclick="toggleMenu()">&#9776 Page: {{page.title}}</button>
-            </div>
         </div>
+    </div>
+    <div id="nonheaderfooter">
         <div id="sidebar">
             <h1>Site Index</h1>
             {% assign pages_by_importance = site.pages | sort: "importance" %}
@@ -41,8 +41,6 @@
             <div></div>
         </div>
         <div id="markdown_content">
-            <div id="spacer">  <!-- put this here for menu bar spacing -->
-            </div>
             {{ content }}
         </div>
     </div>
@@ -58,12 +56,5 @@
     </footer>
 
 </div>
-
-<script>
-    function toggleMenu() {
-    var element = document.getElementById("topmenu_div");
-    element.classList.toggle("slider-active");
-}
-</script>
 
 {% include footer.html %}

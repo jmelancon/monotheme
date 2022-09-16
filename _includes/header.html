@@ -9,9 +9,10 @@
             .hamburger_div {
                 width: 100%;
                 height: 6em;
-                background-color: {{ site.colors.accent }};
+                background-color: {{ site.colors.secondary }};
+                display: block;
             }
-            .hamburger_div button{
+            /*.hamburger_div button{
                 width: 100%;
                 height: 100%;
                 vertical-align: middle;
@@ -22,6 +23,21 @@
                 font-size: 20px;
                 padding: 1em;
                 text-align: center;
+            }*/
+            #menutoggle{
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                background-color: {{ site.colors.secondary }};
+                color: {{ site.colors.text }};
+                display: flex;
+                font-size: 20px;
+                position: relative;
+                z-index: 5;
+            }
+            #cb:checked + #topmenu_div {
+                transform: translate(0%,0%);
             }
             .topmenu_content{
                 width:100%;
@@ -30,9 +46,10 @@
                 color: {{ site.colors.text }};
                 margin: 0;
                 display: inline-block;
-                transform: translate(0,calc(-100% + 6em));
+                transform: translate(0,calc(-100% - 6em));
                 z-index: 4;
                 position: absolute;
+                padding-bottom: 1rem;
             }
 
             /* menu arrangement*/
@@ -97,6 +114,7 @@
                 z-index: 0;
                 padding-bottom: 2em;
                 float: right;
+                flex: 1;
             }
             #wrap{
                 display: flex;
@@ -284,7 +302,7 @@
                     padding-right: 5rem;
                     font-size:24px;
                 }
-                .topmenu_content, #spacer{
+                .topmenu_content, #spacer, .hamburger_div{
                     display: none;
                 }
                 #sidebar{
