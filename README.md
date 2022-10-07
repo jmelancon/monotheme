@@ -1,50 +1,63 @@
 # monotheme-grey
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+A utilitarian theme designed to be customizable and responsive.
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
-
-
-## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "monotheme-grey"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: monotheme-grey
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install monotheme-grey
+### Features:
+- Tastefully designed mobile and desktop layouts
+  - Sidebar-oriented desktop navigation with fairly liberal spacing
+  - Menu-oriented mobile navigation with more conservative spacing
+- Easily customizable in terms of coloring
+- No JavaScript usage - Allow users to fully use your site with scripts disabled
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+To start using this theme with your GitHub pages site, simply add the following to your _config.yml:
 
-## Contributing
+```
+remote_theme: jmelancon/monotheme
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+title: "My cool project title!" # set this to the title of your page
+project_name: "Project name" # set this to the name of your project
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://myprofile.github.io/mysite" # the base hostname & protocol for your site, e.g. http://example.com
+footer_text: "mygithub/relevantrepo" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
+icon_location: "/assets/project_pic.png" # where your project image is. don't leave blank!
 
-## Development
+# theming
+colors:
+    primary: "#1E1E20"
+    secondary: "#252527"
+    tertiary: "#424247"
+    accent: Gainsboro
+    text: Gainsboro
+    textbox: "#424247"
+    links: Gainsboro
+mobile:
+    header_text_size: 6
 
-To set up your environment to develop this theme, run `bundle install`.
+exclude:
+    README.md
+    LICENSE
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+plugins:
+  - jemoji # used for emojis. use them with normal GitHub markdown syntax, like this :smile:
+```
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `monotheme-grey.gemspec` accordingly.
+Also, be sure to add the following to the top of each markdown file in your site:
+
+```
+---
+layout: page
+title: Home
+desc: Debug home page. Text here for meta description.
+permalink: /
+importance: -1
+---
+```
+
+Of note is title, desc, and importance. `title` is the title of the page. This will appear in the `<title>` tag. `desc` is used for the `<meta name="description">` tag for SEO purposes. `importance` can be the same for each page, however, if you would like to sort your pages in the mobile and desktop navigation areas, using a larger importance number will make the object appear lower on the list.  
+
+To use favicons, put your ```favicon.ico``` in the root directory of your repository.
 
 ## License
 
