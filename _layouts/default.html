@@ -19,9 +19,11 @@
             <ul align=center>
                 {% assign pages_by_importance = site.pages | sort: "importance" %}
                 {% for post in pages_by_importance %}
+                {% if post.title %}
                 <li align=center>
                     <a href="{{ post.url }}">{{ post.title }}</a>
                 </li>
+                {% endif %}
                 {% endfor %}
             </ul>
         </div>
@@ -31,11 +33,13 @@
             <h1>Site Index</h1>
             {% assign pages_by_importance = site.pages | sort: "importance" %}
             {% for post in pages_by_importance %}
-                {% if post.url == page.url %}
-                    <p><b><a href="{{ post.url }}">{{ post.title }}</a></b></p>
-                {% endif %}
-                {% if post.url != page.url %}
-                    <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+                    {% if post.title %}
+                    {% if post.url == page.url %}
+                        <p><b><a href="{{ post.url }}">{{ post.title }}</a></b></p>
+                    {% endif %}
+                    {% if post.url != page.url %}
+                        <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+                    {% endif %}
                 {% endif %}
             {% endfor %}
             <div></div>
