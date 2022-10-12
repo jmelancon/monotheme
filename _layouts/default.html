@@ -15,7 +15,7 @@
         <label for=cb id="menutoggle">&#9776 Page: {{page.title}}</label>
         <input type='checkbox' style='display: none' id=cb>
         <div class="topmenu_content slider" id="topmenu_div">
-            <h3 align=center>site map:</h3>
+            <p id="sitemap_header">site map:</p>
             <ul align=center>
                 {% assign pages_by_importance = site.pages | sort: "importance" %}
                 {% for post in pages_by_importance %}
