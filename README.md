@@ -8,6 +8,7 @@ A utilitarian theme designed to be customizable and responsive.
   - Menu-oriented mobile navigation with more conservative spacing
 - Easily customizable in terms of coloring
 - No JavaScript usage - Allow users to fully use your site with scripts disabled
+- Auto-generated sitemap.xml
 
 ## Usage
 
@@ -60,6 +61,8 @@ importance: -1
 Of note is title, desc, and importance. `title` is the title of the page. This will appear in the `<title>` tag. `desc` is used for the `<meta name="description">` tag for SEO purposes. `importance` can be the same for each page, however, if you would like to sort your pages in the mobile and desktop navigation areas, using a larger importance number will make the object appear lower on the list.  
 
 To use favicons, put your ```favicon.ico``` in the root directory of your repository.
+
+Any page with a title will be included in the site's sitemap.xml.
 
 ## License
 
