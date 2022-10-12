@@ -18,10 +18,12 @@ remote_theme: jmelancon/monotheme
 
 title: "My cool project title!" # set this to the title of your page
 project_name: "Project name" # set this to the name of your project
+lang: "en" # the language of the website in html format
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://myprofile.github.io/mysite" # the base hostname & protocol for your site, e.g. http://example.com
 footer_text: "mygithub/relevantrepo" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
 icon_location: "/assets/project_pic.png" # where your project image is. don't leave blank!
+icon_alt_text: "Project logo" # alt text for your project's image. you can leave this blank, but you really shouldn't.
 
 # theming
 colors:
