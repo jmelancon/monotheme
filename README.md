@@ -1,4 +1,4 @@
-# monotheme-grey
+# monotheme
 
 A utilitarian theme designed to be customizable and responsive.
 
