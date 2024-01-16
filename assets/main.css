@@ -156,6 +156,35 @@ li p{
 }
 
 
+@keyframes preanim {
+    0% {content: "\00a0\00a0\00a0\00a0";}
+    33% {content: "\00a0\00a0> ";}
+    66% {content: "\00a0>> ";}
+    100% {content: ">>> ";}
+}
+
+@keyframes postanim {
+    0% {content: " ";}
+    33% {content: " <";}
+    66% {content: " <<";}
+    100% {content: " <<<";}
+}
+
+:target:before{
+    content: ">>> ";
+    animation-name: preanim;
+    animation-duration: 0.75s;
+    animation-timing-function: step-start;
+}
+
+:target:after{
+    content: " <<<";
+    animation-name: postanim;
+    animation-duration: 0.75s;
+    animation-timing-function: step-start;
+
+}
+
 /* mobile-specific theming */
 @media screen and (max-width: 1499px) {
     /* header theming */
