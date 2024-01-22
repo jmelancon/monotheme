@@ -43,7 +43,7 @@ colors:
     tertiary: "#b3b3b3"
     accent: "#999"
     text: Black
-    textbox: "#666"
+    textbox: "#eee"
     links: "#5f1688"
 mobile:
     header_text_size: 6

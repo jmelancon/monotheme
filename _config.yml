@@ -27,13 +27,22 @@ icon_location: "/assets/project_pic.jpg" # where your project image is. don't le
 
 # Theming
 colors:
+  dark:
     primary: "#1E1E20"
     secondary: "#252527"
     tertiary: "#424247"
     accent: Gainsboro
     text: Gainsboro
     textbox: "#424247"
-    links: Gainsboro
+    links: "#ebc6ff"
+  light:
+    primary: White
+    secondary: "#ddd"
+    tertiary: "#b3b3b3"
+    accent: "#999"
+    text: Black
+    textbox: "#eee"
+    links: "#5f1688"
 mobile:
     header_text_size: 6
 
