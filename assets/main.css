@@ -108,6 +108,11 @@ layout: none
     padding-right: 8px;
 }
 
+.header_div img, .header_div svg{
+        width: 128px;
+        height: 128px;
+    }
+
 /* define basic theme */
 body, #markdown_content {
     font-family: monospace;
@@ -212,10 +217,9 @@ li p{
 /* mobile-specific theming */
 @media screen and (max-width: 1499px) {
     /* header theming */
-    .header_div img{
+    .header_div img, .header_div svg{
         width: 10vw;
         height: 10vw;
-        border: 1vw solid var(--accent);
     }
     .header_div h1{
         font-size: {{ site.mobile.header_text_size }}vw!important;

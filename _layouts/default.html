@@ -4,7 +4,16 @@
     <header id="page-header">
         <div class="header_div" align=center>
             <div>
-                <img alt = "{{site.icon_alt_text}}" src="{{ site.icon_location }}" height=128px width=128px style="border: 8px solid {{ site.colors.accent }}">
+                {% for static_file in site.static_files %}
+                    {% if static_file.path == '/assets/header.svg' %}
+                        {% assign svgheader = true %}
+                    {% endif %}
+                {% endfor %}
+                {% if svgheader %}
+                    <svg><use href="/assets/header.svg#svg1"></use></svg>
+                {% else %}
+                    <img alt = "{{site.icon_alt_text}}" src="{{ site.icon_location }}" height=128px width=128px style="border: 8px solid {{ site.colors.accent }}">
+                {% endif %}
             </div>
             <div>
                 <h1 style="font-size: 64px; color: {{ site.colors.accent }};">{{ site.project_name }}</h1>
